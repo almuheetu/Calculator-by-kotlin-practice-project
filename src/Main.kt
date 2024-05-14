@@ -46,11 +46,11 @@ class BasicCalculator() : PiCalculator(), Calculator {
         }
     }
 
-//    override fun piCalculator(a: Int) {
-//
-//        println("piCalculator is  ${3.1416 * a}")
-//
-//    }
+    override fun piCalculator(a: Int) {
+
+        println("piCalculator is  ${3.1416 * a}")
+
+    }
     private fun result(message: String) {
         println(message)
     }
