@@ -9,7 +9,14 @@ interface Calculator {
     fun divide(a: Int, b: Int)
 }
 
-class BasicCalculator() : Calculator {
+open class PiCalculator {
+  open fun piCalculator(a: Int){
+        println(3.1416 * a)
+    }
+}
+
+
+class BasicCalculator() : PiCalculator(), Calculator {
     override fun add(a: Int, b: Int) {
         val result = a + b
 
@@ -32,13 +39,18 @@ class BasicCalculator() : Calculator {
         if (b != 0) {
             val divide = a / b
 
-            println("devide is $divide")
+            println("divide is $divide")
         } else {
             println("Cannot divide by 0")
 
         }
     }
 
+//    override fun piCalculator(a: Int) {
+//
+//        println("piCalculator is  ${3.1416 * a}")
+//
+//    }
     private fun result(message: String) {
         println(message)
     }
@@ -66,6 +78,7 @@ fun main() {
 
 
     basicCalculator.divide(operatorOne, operatorTwo)
+    basicCalculator.piCalculator(operatorTwo)
 
 
 }
